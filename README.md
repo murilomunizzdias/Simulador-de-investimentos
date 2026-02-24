@@ -1,9 +1,6 @@
-O Gemini disse
 
-Essa é uma excelente ideia. Ter um projeto que vai desde a lógica básica de Python (Tuplas, Dicionários e Funções) até a integração com Banco de Dados Relacional (PostgreSQL) é o que os recrutadores mais valorizam no GitHub.
 
-Aqui está uma sugestão de README.md profissional para você copiar e adaptar:
-🚀 Bradesco Invest-Genius V3: Motor de Recomendação & Simulador Financeiro
+🚀 Invest-Genius V3: Motor de Recomendação & Simulador Financeiro
 
 Este projeto é um sistema de simulação de investimentos desenvolvido para o ecossistema bancário, focado na experiência do usuário (UX) e na integridade dos dados. Ele permite o cadastro de perfis de investidores, recomenda ativos com base em tolerância de risco e simula o rendimento de juros compostos ao longo do tempo.
 🛠️ Tecnologias Utilizadas
