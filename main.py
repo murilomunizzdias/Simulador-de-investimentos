@@ -1,7 +1,6 @@
 from collections import namedtuple
 import psycopg2
 
-# 1. DEFINIÇÃO DOS ATIVOS
 Investimento = namedtuple('Investimento', ['nome', 'taxa', 'risco'])
 
 INVESTIMENTOS_FIXOS = (
@@ -12,17 +11,17 @@ INVESTIMENTOS_FIXOS = (
 )
 
 
-# 2. CONEXÃO COM O BANCO
+
 def get_connection():
     return psycopg2.connect(
         host="localhost",
         database="invest_db",
         user="postgres",
-        password="722406"  # Lembre-se de manter entre aspas
+        password="722406"
     )
 
 
-# 3. FUNÇÕES DE APOIO
+
 def listar_investimentos():
     print("\n" + "=" * 45)
     print("      CATÁLOGO DE INVESTIMENTOS DISPONÍVEIS")
@@ -32,7 +31,7 @@ def listar_investimentos():
     print("=" * 45)
 
 
-# 4. OPERAÇÕES DO SISTEMA (CRUD)
+
 
 def cadastrar_cliente():
     print("\n--- Cadastro Bradesco Invest ---")
@@ -117,7 +116,7 @@ def menu_cliente(nome_usuario, id_usuario, tolerancia):
                 print("Ativo inválido ou incompatível com seu risco.")
 
         elif opcao == "2":
-            # READ (R do CRUD)
+
             print(f"\n--- CARTEIRA CONSOLIDADA: {nome_usuario} ---")
             with get_connection() as conn:
                 with conn.cursor() as cur:
@@ -156,7 +155,6 @@ def menu_cliente(nome_usuario, id_usuario, tolerancia):
 
                         print(f"Calculando {nome_at}... Lucro de R$ {lucro_gerado:.2f} gerado.")
 
-                        # SALVANDO TUDO NO SQL (Atualiza valor antigo, lucro e o novo saldo)
                         cur.execute("""
                                     UPDATE carteiras
                                     SET valor_antigo    = %s,
@@ -176,7 +174,7 @@ def menu_cliente(nome_usuario, id_usuario, tolerancia):
             break
 
 
-# 5. LOOP PRINCIPAL
+
 def iniciar_sistema():
     while True:
         print("\n" + "#" * 30)
