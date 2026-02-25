@@ -1,28 +1,24 @@
+Invest-Genius V3
 
+Este é um sistema de gerenciamento de investimentos desenvolvido em Python com persistência de dados em PostgreSQL. O projeto permite o cadastro de clientes, simulação de rendimentos financeiros compostos e controle total da carteira de ativos.
+🚀 Funcionalidades (CRUD Completo)
 
-🚀 Invest-Genius V3: Motor de Recomendação & Simulador Financeiro
+O sistema implementa as quatro operações fundamentais de um banco de dados:
 
-Este projeto é um sistema de simulação de investimentos desenvolvido para o ecossistema bancário, focado na experiência do usuário (UX) e na integridade dos dados. Ele permite o cadastro de perfis de investidores, recomenda ativos com base em tolerância de risco e simula o rendimento de juros compostos ao longo do tempo.
+    Create (Criar): Cadastro de novos clientes e compra de ativos financeiros.
+
+    Read (Ler): Consulta de saldo, extrato detalhado e catálogo de investimentos.
+
+    Update (Atualizar): Simulação de avanço de tempo com atualização de saldo, lucro e histórico no banco de dados.
+
+    Delete (Deletar): Encerramento de conta com exclusão automática de todos os investimentos vinculados (via Cascade).
+
 🛠️ Tecnologias Utilizadas
 
-    Python 3.10+: Linguagem core do projeto.
+    Linguagem: Python 3.x
 
-    PostgreSQL: Persistência de dados relacional.
+    Banco de Dados: PostgreSQL 16+
 
-    Psycopg2: Driver de conexão entre Python e Banco de Dados.
+    Biblioteca de Conexão: psycopg2
 
-    NamedTuples: Para garantir a imutabilidade das regras de negócio (ativos).
-
-📌 Funcionalidades
-
-    Gestão de Usuários: Cadastro com validação de maioridade e perfil de risco (1 a 4).
-
-    Motor de Recomendação: Filtra investimentos do catálogo que se adequam à tolerância de perda do cliente.
-
-    Simulador de Tempo: Algoritmo de juros compostos (M=P(1+i)t) que projeta o crescimento do patrimônio.
-
-    Persistência em DB: Integração completa com PostgreSQL para salvar perfis e carteiras de ativos.
-
-🏗️ Estrutura do Banco de Dados
-
-O projeto utiliza um modelo relacional para separar os dados sensíveis dos clientes das suas movimentações financeiras:
+    Ferramenta de Gestão: pgAdmin 4
